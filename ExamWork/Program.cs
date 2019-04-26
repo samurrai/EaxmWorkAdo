@@ -103,7 +103,7 @@ namespace ExamWork
                                 }
                                 Console.WriteLine("Город не найден");
                                 break;
-                            }
+                            }    
                         }
                         break;
                     }
@@ -198,14 +198,32 @@ namespace ExamWork
                     }
                     if (choice == 2)
                     {
-                        Country country = new Country();
+                        City city = new City();
                         while (true)
                         {
                             Console.WriteLine("Введите название");
-                            country.Name = Console.ReadLine();
-                            if (!string.IsNullOrWhiteSpace(country.Name))
+                            city.Name = Console.ReadLine();
+                            if (!string.IsNullOrWhiteSpace(city.Name))
                             {
-                                break;
+                                while (true)
+                                {
+                                Console.WriteLine("Введите страну");
+                                string countryName = Console.ReadLine();
+                                if (!string.IsNullOrWhiteSpace(countryName))
+                                {
+                                    foreach (var country in context..Counties)
+                                    {
+                                        if (country.Name == countryName)
+                                        {
+                                            city.Country = country;
+                                            context.Streets.Add(city);
+                                            context.SaveChanges();
+                                            break;
+                                        }
+                                    }
+                                    Console.WriteLine("Страна не найден");
+                                    break;
+                                }
                             }
                         }
                     }
@@ -213,26 +231,26 @@ namespace ExamWork
                     {
                         while (true)
                         {
-                            Console.WriteLine("Введите название страны");
-                            string countryName = Console.ReadLine();
-                            if (!string.IsNullOrWhiteSpace(countryName))
+                            Console.WriteLine("Введите название города");
+                            string cityName = Console.ReadLine();
+                            if (!string.IsNullOrWhiteSpace(cityName))
                             {
                                 while (true)
                                 {
                                     Console.WriteLine("Введите новое название");
-                                    string newCountryName = Console.ReadLine();
-                                    if (!string.IsNullOrWhiteSpace(newCountryName))
+                                    string newCityName = Console.ReadLine();
+                                    if (!string.IsNullOrWhiteSpace(newCityName))
                                     {
-                                        foreach (var country in context.Countries)
+                                        foreach (var city in context.Cities)
                                         {
-                                            if (country.Name == newCountryName)
+                                            if (city.Name == newCityName)
                                             {
-                                                country.Name = newCountryName;
+                                                city.Name = newCountryName;
                                                 context.SaveChanges();
                                                 break;
                                             }
                                         }
-                                        Console.WriteLine("Страна не найдена");
+                                        Console.WriteLine("Город не найден");
                                         break;
                                     }
                                 }
@@ -244,20 +262,20 @@ namespace ExamWork
                     {
                         while (true)
                         {
-                            Console.WriteLine("Введите название страны");
-                            string countryName = Console.ReadLine();
-                            if (!string.IsNullOrWhiteSpace(countryName))
+                            Console.WriteLine("Введите название города");
+                            string cityName = Console.ReadLine();
+                            if (!string.IsNullOrWhiteSpace(cityName))
                             {
-                                foreach (var country in context.Countries)
+                                foreach (var city in context.Cities)
                                 {
-                                    if (country.Name == countryName)
+                                    if (city.Name == cityName)
                                     {
-                                        country.DeletedDate = DateTime.Now;
+                                        city.DeletedDate = DateTime.Now;
                                         context.SaveChanges();
                                         break;
                                     }
                                 }
-                                Console.WriteLine("Страна не найдена");
+                                Console.WriteLine("Город не найден");
                                 break;
                             }
                         }
@@ -279,7 +297,7 @@ namespace ExamWork
                     {
                         if (choice == 1)
                         {
-                            if (context.Streets.Count() > 0)
+                            if (context.Countries.Count() > 0)
                             {
                                 foreach (var country in context.Countries)
                                 {
@@ -306,6 +324,8 @@ namespace ExamWork
                                 country.Name = Console.ReadLine();
                                 if (!string.IsNullOrWhiteSpace(country.Name))
                                 {
+                                    context.Countries.Add(country);
+                                    context.SaveChanges();
                                     break;
                                 }
                             }
