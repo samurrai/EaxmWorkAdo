@@ -1,0 +1,15 @@
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\ExamWork.exe.config
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\ExamWork.exe
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\ExamWork.pdb
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\obj\Debug\ExamWork.csprojAssemblyReference.cache
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\obj\Debug\ExamWork.csproj.CoreCompileInputs.cache
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\obj\Debug\ExamWork.exe
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\obj\Debug\ExamWork.pdb
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\EntityFramework.dll
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\EntityFramework.xml
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\obj\Debug\ExamWork.csproj.CopyComplete
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\Models.dll
+C:\Users\ШадикьянР\source\repos\ExamWork\ExamWork\bin\Debug\Models.pdb
